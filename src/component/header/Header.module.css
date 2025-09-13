@@ -1,0 +1,12 @@
+.container {
+    height: 65px;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 3px solid hsla(0, 0%, 92%, 1);
+}
+
+.container_span {
+    cursor: pointer;
+}
