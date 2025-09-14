@@ -19,8 +19,6 @@ const HomeContent = () => {
         {id: "8", img: "/images/javascript-events.png", title: "رویداد ها در جاوا اسکریپت", time: "30"}
     ];
 
-    // const articles = [];
-
     return (
         <div className={styles.container}>
             <span className={styles.container_title}>مقالات جدید</span>
