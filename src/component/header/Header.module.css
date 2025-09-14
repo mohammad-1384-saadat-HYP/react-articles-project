@@ -3,10 +3,21 @@
     direction: rtl;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     border-bottom: 3px solid hsla(0, 0%, 92%, 1);
+    padding-inline-start: 30px;
 }
 
-.container_span {
+.container_title {
+    color: hsl(39, 100%, 50%);
+}
+
+.container_spanHolder {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container_spanHolder_span {
     cursor: pointer;
 }

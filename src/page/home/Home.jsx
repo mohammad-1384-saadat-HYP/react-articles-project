@@ -1,13 +1,11 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Header from "../../component/header/Header";
 
 const Home = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route></Route>
-            </Routes>
-        </BrowserRouter>
+        <div>
+            <Header title="عنوان"/>
+        </div>
     );
 };
 

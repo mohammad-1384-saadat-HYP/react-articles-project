@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./component/header/Header";
+import Home from "./page/home/Home";
 
 function App() {
     return (
         <React.Fragment>
-            <Header/>
+            <Home/>
         </React.Fragment>
     );
 }
