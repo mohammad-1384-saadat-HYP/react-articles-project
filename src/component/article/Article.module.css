@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    box-shadow: 0 3px 5px hsl(0, 0%, 75%);
 }
 
 .container_imgHolder {
@@ -24,7 +25,6 @@
     flex-direction: column;
     gap: 10px;
     padding: 10px;
-    box-shadow: 0 1px 1px 0;
 }
 
 .container_textHolder_title {
