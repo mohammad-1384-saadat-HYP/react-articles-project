@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./HomeContent.module.css";
-import Article from "../../../component/Article/Article";
+import Article from "../../../component/article/Article";
 
 const HomeContent = () => {
     const articles = [
