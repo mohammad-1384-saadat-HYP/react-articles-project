@@ -1,13 +1,9 @@
 import React from 'react';
 import styles from './Header.module.css';
 
-const Header = (props) => {
-
-    console.log(props)
-
+const Header = () => {
     return (
         <div className={styles.container}>
-            <h1 className={styles.container_title}>{props.title}</h1>
             <div className={styles.container_spanHolder}>
                 <span className={styles.container_spanHolder_span}>لیست مقالات</span>
                 <span className={styles.container_spanHolder_span}>مقاله جدید</span>
