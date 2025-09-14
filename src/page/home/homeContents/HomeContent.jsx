@@ -22,7 +22,9 @@ const HomeContent = () => {
         <div className={styles.container}>
             <span className={styles.container_title}>مقالات جدید</span>
             <div className={styles.container_articles}>
-                {articles.map(x => <Article img={x.img} title={x.title} time={x.time}/>)}
+                {articles.map((x, i) => {
+                    return (<Article key={i} img={x.img} title={x.title} time={x.time}/>)
+                })}
             </div>
         </div>
     );
