@@ -1,0 +1,15 @@
+.container {
+    padding: 15px 75px;
+    direction: rtl;
+}
+
+.container_title {
+    width: fit-content;
+}
+
+.container_articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}

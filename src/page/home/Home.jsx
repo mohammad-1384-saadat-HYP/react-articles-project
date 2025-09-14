@@ -1,10 +1,12 @@
 import React from 'react';
 import Header from "../../component/header/Header";
+import HomeContent from "./homeContents/HomeContent";
 
 const Home = () => {
     return (
         <div>
-            <Header title="عنوان"/>
+            <Header/>
+            <HomeContent/>
         </div>
     );
 };
