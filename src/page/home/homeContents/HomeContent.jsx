@@ -4,7 +4,6 @@ import Article from "../../../component/article/Article";
 import axios from "axios";
 
 const HomeContent = () => {
-
     const [articles, setArticles] = useState([]);
 
     async function api_articles() {
