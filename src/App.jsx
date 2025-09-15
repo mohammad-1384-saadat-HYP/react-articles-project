@@ -11,7 +11,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<AboutUs/>}/>
-                <Route path="/article" element={<ArticlePage/>}/>
+                <Route path="/article/:information" element={<ArticlePage/>}/>
                 <Route path="/new" element={<NewArticle/>}/>
             </Routes>
         </React.Fragment>

@@ -23,7 +23,7 @@ const HomeContent = () => {
             <span className={styles.container_title}>مقالات جدید</span>
             <div className={styles.container_articles}>
                 {articles.map(x => {
-                    return (<Article key={x?.id} img={x?.img} title={x?.title} time={x?.time}/>)
+                    return (<Article key={x?.id} id={x?.id} img={x?.img} title={x?.title} time={x?.time}/>)
                 })}
             </div>
         </div>
