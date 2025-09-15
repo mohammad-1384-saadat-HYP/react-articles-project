@@ -20,4 +20,5 @@
 
 .container_img_text {
     color: hsl(155.08deg 71.38% 58.73%);
+    cursor: pointer;
 }
