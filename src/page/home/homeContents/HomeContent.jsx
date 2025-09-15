@@ -6,7 +6,7 @@ import axios from "axios";
 const HomeContent = () => {
     const [articles, setArticles] = useState([]);
 
-    async function api_articles() {
+    async function fetch_articles() {
         await axios.get("http://localhost:8000/articles").then(result => {
             console.log(result)
             setArticles(result.data.data);
@@ -16,7 +16,7 @@ const HomeContent = () => {
     }
 
     useEffect(() => {
-        api_articles();
+        fetch_articles();
     }, []);
 
     return (
