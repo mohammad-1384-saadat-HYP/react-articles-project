@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "../../component/header/Header";
-import HomeContent from "./homeContent/HomeContent";
+import HomeContent from "./components/HomeContent";
 import Footer from "../../component/footer/Footer";
 
 const Home = () => {
