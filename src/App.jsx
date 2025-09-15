@@ -3,6 +3,7 @@ import Home from "./page/home/Home";
 import {Route, Routes} from "react-router";
 import AboutUs from "./page/aboutUs/AboutUs";
 import NewArticle from "./page/newArticle/NewArticle";
+import ArticlePage from "./page/articlePage/ArticlePage";
 
 function App() {
     return (
@@ -10,7 +11,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<AboutUs/>}/>
-                <Route path="/new" element={<NewArticle/>}/>
+                <Route path="/articlePage" element={<ArticlePage/>}/>
+                <Route path="/newArticle" element={<NewArticle/>}/>
             </Routes>
         </React.Fragment>
     );
