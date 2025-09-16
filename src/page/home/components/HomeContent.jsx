@@ -5,27 +5,33 @@ import axios from "axios";
 
 const HomeContent = () => {
     const [articles, setArticles] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     async function fetch_articles() {
-        await axios.get("http://localhost:8000/articles").then(result => {
+        try {
+            const result = await axios.get("http://localhost:8000/articles");
             setArticles(result.data);
-        }).catch(error => {
+            setIsLoading(false);
+        } catch (error) {
             console.log(error);
-        });
+        }
     }
 
     useEffect(() => {
+        setIsLoading(true);
         fetch_articles();
     }, []);
 
     return (
         <div className={styles.container}>
             <span className={styles.container_title}>مقالات جدید</span>
-            <div className={styles.container_articles}>
-                {articles.map(x => {
-                    return (<Article key={x?.id} id={x?.id} img={x?.img} title={x?.title} time={x?.time}/>)
-                })}
-            </div>
+            {
+                isLoading ? <p>در حال بارگزاری</p> : <div className={styles.container_articles}>
+                    {articles.map(x => {
+                        return (<Article key={x?.id} id={x?.id} img={x?.img} title={x?.title} time={x?.time}/>)
+                    })}
+                </div>
+            }
         </div>
     );
 };
