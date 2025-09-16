@@ -5,11 +5,11 @@ import ArticlePageContent from "./components/ArticlePageContent";
 
 const ArticlePage = () => {
     return (
-        <div>
+        <>
             <Header/>
             <ArticlePageContent/>
             <Footer/>
-        </div>
+        </>
     );
 };
 

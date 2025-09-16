@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './NewArticleContent.module.css';
 
 const NewArticleContent = () => {
     return (
-        <div>
+        <div className={styles.container}>
 
         </div>
     );

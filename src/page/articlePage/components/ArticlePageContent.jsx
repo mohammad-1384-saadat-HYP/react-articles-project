@@ -8,12 +8,17 @@ const ArticlePageContent = () => {
 
     const [article, setArticle] = useState([]);
 
-    useEffect(() => {
-        axios.get(`http://localhost:8000/articles/${params.id}`).then(result => {
+    async function fetch_chosen_article() {
+        try {
+            const result = await axios.get(`http://localhost:8000/articles/${params.id}`);
             setArticle(result.data)
-        }).catch(error => {
+        } catch (error) {
             console.log(error);
-        });
+        }
+    }
+
+    useEffect(() => {
+        fetch_chosen_article();
     }, []);
 
     return (
