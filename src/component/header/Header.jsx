@@ -8,6 +8,7 @@ const Header = () => {
             <div className={styles.container_spanHolder}>
                 <Link className={styles.container_spanHolder_span} to="/">لیست مقالات</Link>
                 <Link className={styles.container_spanHolder_span} to="/about">درباره</Link>
+                <Link className={styles.container_spanHolder_span} to="/create-article">ساخت مقاله جدید</Link>
             </div>
         </div>
     );

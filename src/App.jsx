@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./page/home/Home";
 import {Route, Routes} from "react-router";
 import AboutUs from "./page/aboutUs/AboutUs";
-import NewArticle from "./page/newArticle/NewArticle";
+import CreateArticle from "./page/createArticle/CreateArticle";
 import ArticlePage from "./page/articlePage/ArticlePage";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<AboutUs/>}/>
                 <Route path="/article/:id" element={<ArticlePage/>}/>
-                <Route path="/new" element={<NewArticle/>}/>
+                <Route path="/create-article" element={<CreateArticle/>}/>
             </Routes>
         </>
     );
