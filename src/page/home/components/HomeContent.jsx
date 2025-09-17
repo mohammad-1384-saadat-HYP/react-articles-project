@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from "./HomeContent.module.css";
 import Article from "./Article";
 import axios from "axios";
+import LoadingInline from "../../../component/loadingInline/LoadingInline";
 
 const HomeContent = () => {
     const [articles, setArticles] = useState([]);
@@ -26,7 +27,7 @@ const HomeContent = () => {
         <div className={styles.container}>
             <span className={styles.container_title}>مقالات جدید</span>
             {
-                isLoading ? <p>در حال بارگزاری</p> : <div className={styles.container_articles}>
+                isLoading ? <LoadingInline/> : <div className={styles.container_articles}>
                     {articles.map(x => {
                         return (<Article key={x?.id} id={x?.id} img={x?.img} title={x?.title} time={x?.time}/>)
                     })}
