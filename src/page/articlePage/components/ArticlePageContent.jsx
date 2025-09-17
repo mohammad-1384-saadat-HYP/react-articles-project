@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './ArticlePageContent.module.css';
 import {useParams} from "react-router-dom";
 import axios from "axios";
+import LoadingInline from "../../../component/loadingInline/LoadingInline";
 
 const ArticlePageContent = () => {
     const params = useParams();
@@ -24,9 +25,11 @@ const ArticlePageContent = () => {
     }, []);
 
     return (
-        <div className={styles.container}>
-            {
-                isLoading ? <p>در حال بارگزاری</p> : <>
+        <>
+            {isLoading ?
+                <LoadingInline/>
+                :
+                <div className={styles.container}>
                     <h1 className={styles.container_title}>{article.title}</h1>
                     <div className={styles.container_details}>
                         <span>تاریخ {article.date}</span>
@@ -37,9 +40,9 @@ const ArticlePageContent = () => {
                         <img className={styles.container_imgHolder_img} src={article.img} alt={article.title}/>
                     </div>
                     <p>{article.content}</p>
-                </>
+                </div>
             }
-        </div>
+        </>
     );
 };
 
