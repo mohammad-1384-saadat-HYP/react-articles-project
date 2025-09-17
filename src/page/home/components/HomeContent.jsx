@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from "./HomeContent.module.css";
-import Article from "../../../component/article/Article";
+import Article from "./Article";
 import axios from "axios";
 
 const HomeContent = () => {
