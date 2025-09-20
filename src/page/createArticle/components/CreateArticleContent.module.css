@@ -1,3 +1,47 @@
-.container{
+.container {
+    width: 100%;
+    padding: 0 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
+.container_title {
+    width: fit-content;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.container_field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container_field_title {
+    width: fit-content;
+}
+
+.container_field_input {
+    padding: 12px;
+    cursor: text;
+    font-size: 14px;
+    border: 1px solid hsl(0, 0%, 70%);
+    border-radius: 2px;
+}
+
+.textarea {
+    font-size: 18px;
+}
+
+.container_createBtn {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: hsl(203 100% 50%);
+    border: 0;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
 }
