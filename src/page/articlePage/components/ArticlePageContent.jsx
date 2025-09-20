@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import styles from './ArticlePageContent.module.css';
 import {useParams} from "react-router-dom";
 import axios from "axios";
 import LoadingInline from "../../../component/loadingInline/LoadingInline";
+
+import styles from './ArticlePageContent.module.css';
+
 
 const ArticlePageContent = () => {
     const params = useParams();

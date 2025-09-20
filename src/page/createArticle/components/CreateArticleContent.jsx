@@ -1,8 +1,12 @@
 import React, {useRef} from 'react';
-import styles from './CreateArticleContent.module.css';
 import CreateArticleInput from "./CreateArticleInput";
 import axios from "axios";
 import {Link} from "react-router-dom";
+import DatePicker from "react-multi-date-picker";
+import persian from "react-date-object/calendars/persian"
+import persian_fa from "react-date-object/locales/persian_fa"
+
+import styles from './CreateArticleContent.module.css';
 
 const CreateArticleContent = () => {
     const titleRef = useRef();
@@ -14,7 +18,7 @@ const CreateArticleContent = () => {
 
     function addToServer() {
         axios.post("http://localhost:8000/articles", {
-            id: "9",
+            id: "10",
             title: titleRef.current.value,
             date: dateRef.current.value,
             author: authorRef.current.value,
@@ -28,7 +32,8 @@ const CreateArticleContent = () => {
         <div className={styles.container}>
             <span className={styles.container_title}>ساخت مقاله جدید</span>
             <CreateArticleInput ref={titleRef} id="1" title="عنوان" type="text"/>
-            <CreateArticleInput ref={dateRef} id="2" title="تاریخ" type="text"/>
+            {/*<CreateArticleInput ref={dateRef} id="2" title="تاریخ" type="text"/>*/}
+            <DatePicker calendar={persian} locale={persian_fa}/>
             <CreateArticleInput ref={authorRef} id="3" title="نویسنده" type="text"/>
             <CreateArticleInput ref={timeRef} id="4" title="مدت زمان خواندن (دقیقه)" type="number"/>
             <CreateArticleInput ref={imgRef} id="5" title="لینک تصویر" type="text"/>

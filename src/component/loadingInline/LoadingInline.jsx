@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './LoadingInline.module.css';
 import {ImSpinner3} from "react-icons/im";
+
+import styles from './LoadingInline.module.css';
 
 const LoadingInline = () => {
     return (

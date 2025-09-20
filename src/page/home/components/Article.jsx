@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from "./Article.module.css";
 import {Link} from "react-router-dom";
+
+import styles from "./Article.module.css";
 
 const Article = (props) => {
     return (
