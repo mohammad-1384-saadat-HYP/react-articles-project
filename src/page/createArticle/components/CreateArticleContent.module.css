@@ -13,26 +13,22 @@
     margin-bottom: 10px;
 }
 
-.container_field {
+.container_textarea {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.container_field_title {
+.container_textarea_title {
     width: fit-content;
 }
 
-.container_field_input {
+.container_textarea_input {
     padding: 12px;
     cursor: text;
-    font-size: 14px;
+    font-size: 16px;
     border: 1px solid hsl(0, 0%, 70%);
     border-radius: 2px;
-}
-
-.textarea {
-    font-size: 18px;
 }
 
 .container_createBtn {
