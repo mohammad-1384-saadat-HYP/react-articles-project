@@ -10,6 +10,7 @@ const CreateArticleContent = () => {
             <CreateArticleInput id="2" title="تاریخ" type="date"/>
             <CreateArticleInput id="3" title="نویسنده" type="text"/>
             <CreateArticleInput id="4" title="مدت زمان خواندن" type="number"/>
+            <CreateArticleInput id="5" title="لینک تصویر" type="text"/>
             <div className={styles.container_textarea}>
                 <label htmlFor="textarea" className={styles.container_textarea_title}>متن</label>
                 <textarea id="textarea" className={styles.container_textarea_input} rows="10"></textarea>
