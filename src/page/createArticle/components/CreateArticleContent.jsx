@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import styles from './CreateArticleContent.module.css';
 import CreateArticleInput from "./CreateArticleInput";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 const CreateArticleContent = () => {
     const titleRef = useRef();
@@ -13,7 +14,7 @@ const CreateArticleContent = () => {
 
     function addToServer() {
         axios.post("http://localhost:8000/articles", {
-            id: "10",
+            id: "9",
             title: titleRef.current.value,
             date: dateRef.current.value,
             author: authorRef.current.value,
@@ -36,7 +37,9 @@ const CreateArticleContent = () => {
                 <textarea ref={textareaRef} id="textarea" className={styles.container_textarea_input}
                           rows="10"></textarea>
             </div>
-            <button onClick={addToServer} className={styles.container_createBtn}>ساخت مقاله</button>
+            <Link to="/">
+                <button onClick={addToServer} className={styles.container_createBtn}>ساخت مقاله</button>
+            </Link>
         </div>
     );
 };
