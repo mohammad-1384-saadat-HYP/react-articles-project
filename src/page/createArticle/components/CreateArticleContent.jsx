@@ -11,8 +11,8 @@ const CreateArticleContent = () => {
             <CreateArticleInput id="3" title="نویسنده" type="text"/>
             <CreateArticleInput id="4" title="مدت زمان خواندن" type="number"/>
             <div className={styles.container_textarea}>
-                <span className={styles.container_textarea_title}>متن</span>
-                <textarea className={styles.container_textarea_input} rows="10"></textarea>
+                <label htmlFor="textarea" className={styles.container_textarea_title}>متن</label>
+                <textarea id="textarea" className={styles.container_textarea_input} rows="10"></textarea>
             </div>
             <button className={styles.container_createBtn}>ساخت مقاله</button>
         </div>
