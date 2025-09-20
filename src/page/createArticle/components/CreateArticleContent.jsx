@@ -9,7 +9,7 @@ const CreateArticleContent = () => {
     const dateRef = useRef();
     const authorRef = useRef();
     const timeRef = useRef();
-    const imgUrlRef = useRef();
+    const imgRef = useRef();
     const textareaRef = useRef();
 
     function addToServer() {
@@ -19,7 +19,7 @@ const CreateArticleContent = () => {
             date: dateRef.current.value,
             author: authorRef.current.value,
             time: timeRef.current.value,
-            imgUrl: imgUrlRef.current.value,
+            img: imgRef.current.value,
             textarea: textareaRef.current.value
         });
     }
@@ -31,7 +31,7 @@ const CreateArticleContent = () => {
             <CreateArticleInput ref={dateRef} id="2" title="تاریخ" type="text"/>
             <CreateArticleInput ref={authorRef} id="3" title="نویسنده" type="text"/>
             <CreateArticleInput ref={timeRef} id="4" title="مدت زمان خواندن (دقیقه)" type="number"/>
-            <CreateArticleInput ref={imgUrlRef} id="5" title="لینک تصویر" type="text"/>
+            <CreateArticleInput ref={imgRef} id="5" title="لینک تصویر" type="text"/>
             <div className={styles.container_textarea}>
                 <label htmlFor="textarea" className={styles.container_textarea_title}>متن</label>
                 <textarea ref={textareaRef} id="textarea" className={styles.container_textarea_input}
