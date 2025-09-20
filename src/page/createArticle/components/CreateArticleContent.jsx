@@ -27,7 +27,7 @@ const CreateArticleContent = () => {
         <div className={styles.container}>
             <span className={styles.container_title}>ساخت مقاله جدید</span>
             <CreateArticleInput ref={titleRef} id="1" title="عنوان" type="text"/>
-            <CreateArticleInput ref={dateRef} id="2" title="تاریخ" type="date"/>
+            <CreateArticleInput ref={dateRef} id="2" title="تاریخ" type="text"/>
             <CreateArticleInput ref={authorRef} id="3" title="نویسنده" type="text"/>
             <CreateArticleInput ref={timeRef} id="4" title="مدت زمان خواندن (دقیقه)" type="number"/>
             <CreateArticleInput ref={imgUrlRef} id="5" title="لینک تصویر" type="text"/>
