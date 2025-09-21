@@ -1,14 +1,14 @@
-import React, {forwardRef} from 'react';
-
+import React from 'react';
 import styles from './CreateArticleInput.module.css';
 
-const CreateArticleInput = forwardRef((props, ref) => {
+const CreateArticleInput = props => {
     return (
         <div className={styles.container}>
             <label className={styles.container_label} htmlFor="">{props.title}</label>
-            <input ref={ref} className={styles.container_input} id={'input_num_' + props.id} type={props.type}/>
+            <input className={styles.container_input} id={'input_num_' + props.id} type={props.type} name={props.name}
+                   onChange={props.fun}/>
         </div>
     );
-});
+};
 
 export default CreateArticleInput;

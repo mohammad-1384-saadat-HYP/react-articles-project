@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Article from "./Article";
 import axios from "axios";
 import LoadingInline from "../../../component/loadingInline/LoadingInline";
-
 import styles from "./HomeContent.module.css";
 
 const HomeContent = () => {

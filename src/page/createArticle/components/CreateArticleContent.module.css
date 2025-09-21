@@ -23,12 +23,28 @@
     width: fit-content;
 }
 
+.dateHolder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dateHolder_date {
+    width: 100%;
+    padding: 12px;
+    cursor: text;
+    font-size: 14px;
+    border: 1px solid hsl(0, 0%, 70%);
+    border-radius: 2px;
+}
+
 .container_textarea_input {
     padding: 12px;
     cursor: text;
     font-size: 16px;
     border: 1px solid hsl(0, 0%, 70%);
     border-radius: 2px;
+    resize: none;
 }
 
 .container_createBtn {

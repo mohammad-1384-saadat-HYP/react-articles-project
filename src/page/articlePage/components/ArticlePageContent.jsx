@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import axios from "axios";
 import LoadingInline from "../../../component/loadingInline/LoadingInline";
-
 import styles from './ArticlePageContent.module.css';
 
 

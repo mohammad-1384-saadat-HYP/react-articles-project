@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from './AboutUsContent.module.css';
 
 const AboutUsContent = () => {
