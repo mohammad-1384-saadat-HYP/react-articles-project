@@ -6,7 +6,7 @@ const CreateArticleInput = props => {
         <div className={styles.container}>
             <label className={styles.container_label} htmlFor="">{props.title}</label>
             <input className={styles.container_input} id={'input_num_' + props.id} type={props.type} name={props.name}
-                   onChange={props.fun}/>
+                   onChange={props.onChange}/>
         </div>
     );
 };

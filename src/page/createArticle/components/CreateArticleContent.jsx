@@ -18,11 +18,10 @@ const CreateArticleContent = () => {
     })
 
     const handleChangeInput = (e) => {
-        // setArticle(prevState => ({
-        //     ...prevState,
-        //     [e.target.name]: e.target.value
-        // }));
-        console.log(e.target.value)
+        setArticle(prevState => ({
+            ...prevState,
+            [e.target.name]: e.target.value
+        }));
     }
 
     const adToServer = () => {
@@ -40,15 +39,26 @@ const CreateArticleContent = () => {
     return (
         <div className={styles.container}>
             <span className={styles.container_title}>ساخت مقاله جدید</span>
-            <CreateArticleInput id="1" title="عنوان" type="text" name="title" fun={handleChangeInput}/>
+            <CreateArticleInput id="1" title="عنوان" type="text" name="title" onChange={handleChangeInput}/>
             <div className={styles.dateHolder}>
                 <label htmlFor="date_input">تاریخ</label>
-                <DatePicker id="date_input" calendar={persian} locale={persian_fa} inputClass={styles.dateHolder_date}
-                            name="date" fun={handleChangeInput}/>
+                <DatePicker
+                    id="date_input"
+                    calendar={persian}
+                    locale={persian_fa}
+                    inputClass={styles.dateHolder_date}
+                    onChange={date => {
+                        setArticle(prevState => ({
+                            ...prevState,
+                            date: date.format()
+                        }))
+                    }}
+                />
             </div>
-            <CreateArticleInput id="3" title="نویسنده" type="text" name="author" fun={handleChangeInput}/>
-            <CreateArticleInput id="4" title="مدت زمان خواندن (دقیقه)" type="number" name="time" fun={handleChangeInput}/>
-            <CreateArticleInput id="5" title="لینک تصویر" type="text" name="img" fun={handleChangeInput}/>
+            <CreateArticleInput id="3" title="نویسنده" type="text" name="author" onChange={handleChangeInput}/>
+            <CreateArticleInput id="4" title="مدت زمان خواندن (دقیقه)" type="number" name="time"
+                                onChange={handleChangeInput}/>
+            <CreateArticleInput id="5" title="لینک تصویر" type="text" name="img" onChange={handleChangeInput}/>
             <div className={styles.container_textarea}>
                 <label htmlFor="textarea" className={styles.container_textarea_title}>متن</label>
                 <textarea id="textarea" className={styles.container_textarea_input} rows="10" name="content"
